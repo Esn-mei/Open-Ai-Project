@@ -107,12 +107,13 @@ if __name__ == "__main__":
     setup_logging()
 
     # 定义初始状态
-    init_state = {"import_file_path": r"D:\Agent\资料\联想鲸鱼系列用户手册.pdf"}
+    # init_state = {"import_file_path": r"D:\Agent\资料\联想鲸鱼系列用户手册.pdf"}
+    init_state = {"import_file_path": r"D:\Agent\资料\Agent开发实习简历.pdf"}
     workflow = KBImportWorkflow()
 
-# 方式1：实例化后使用（推荐方式，可复用）
-for event in workflow.run(init_state, stream=True):
-    print(f"state: {event}")
+    # 方式1：实例化后使用（推荐方式，可复用）
+    for event in workflow.run(init_state, stream=True):
+        print(f"state: {event}")
 
 # # 方式2：非流式执行
 # final_state = workflow.run(init_state, stream=False)

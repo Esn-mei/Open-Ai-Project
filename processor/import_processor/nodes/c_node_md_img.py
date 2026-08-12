@@ -432,7 +432,7 @@ if __name__ == '__main__':
     setup_logging()
     init_state = {
         "md_path": r"D:\Agent\output\Agent开发实习简历\Agent开发实习简历.md",
-        "md_path": r"D:\Agent\output\联想至像大象系列打印机用户手册V1\auto\联想至像大象系列打印机用户手册V1.md",
+        # "md_path": r"D:\Agent\output\联想至像大象系列打印机用户手册V1\auto\联想至像大象系列打印机用户手册V1.md",
         "md_content": None
     }
     node = NodeMDImg()
