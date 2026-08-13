@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>场景1：基础SSE</title>
+</head>
+<body>
+    <h3>场景1：基础SSE</h3>
+    <div id="result"></div>
+
+    <script>
+        // ✅ 核心：创建EventSource连接SSE接口
+        const eventSource = new EventSource("http://127.0.0.1:8001/simple_stream");
+        const resultDom = document.getElementById("result");
+
+        // 监听SSE消息（实时接收）
+        eventSource.onmessage = function(event) {
+            if (event.data === "[END]") {
+                eventSource.close();
+                return;
+            }
+            resultDom.innerHTML += event.data + "<br>";
+        };
+    </script>
+</body>
+</html>
